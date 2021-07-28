@@ -2,7 +2,6 @@ import React, { FormEvent } from "react";
 import { useState } from "react";
 import sendRequest, { SearchResponse } from "./service/codefinder";
 import "./Global.css";
-import { RequestError } from "@octokit/types";
 
 enum ButtonText {
   loading = "Loading",
@@ -73,8 +72,9 @@ function App() {
           </button>
 
           {requestErrors && (
-            <span style={{color: 'red', marginTop: '35px'}}>
-              Something wrong, please verify input values and your github dev key
+            <span style={{ color: "red", marginTop: "35px" }}>
+              Something wrong, please verify input values and your github dev
+              key
             </span>
           )}
         </form>
@@ -89,7 +89,7 @@ function App() {
               return (
                 <ul className="rounded-list" key={index}>
                   <li>
-                    <span>Repositório: {items[0]?.repository.name}</span>
+                    <span>Repositório: {items[0]?.repository.full_name}</span>
                     <ul>
                       {items.map((item, index) => {
                         return (
