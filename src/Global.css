@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
+
+* {
+  font-size: 16px;
+}
+
+p,
+span {
+  font-family: "Roboto", sans-serif;
+}
+
+ul {
+  counter-reset: li; /* Initiate a counter */
+  list-style: none; /* Remove default numbering */
+  *list-style: decimal; /* Keep using default numbering for IE6/7 */
+  font: 15px "trebuchet MS", "lucida sans";
+  padding: 0;
+  margin-bottom: 4em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+ul ul {
+  margin: 0 0 0 2em; /* Add some left margin for inner lists */
+}
+
+input {
+  outline: 0;
+  border: 0;
+  border-bottom: 1px solid;
+}
+
+.group {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.group input {
+  width: 100%;
+}
+
+.rounded-list a {
+  position: relative;
+  display: block;
+  padding: 0.4em 0.4em 0.4em 2em;
+  *padding: 0.4em;
+  margin: 0.5em 0;
+  background: #ddd;
+  color: #444;
+  text-decoration: none;
+  border-radius: 0.3em;
+  transition: all 0.3s ease-out;
+  word-wrap: break-word;
+}
+
+.rounded-list a:hover {
+  background: #eee;
+}
+
+.rounded-list a:before {
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  left: -1.3em;
+  top: 50%;
+  margin-top: -1.3em;
+  background: #829ede;
+  color: #fff;
+  height: 2em;
+  width: 2em;
+  line-height: 2em;
+  border: 0.3em solid #fff;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 2em;
+  transition: all 0.3s ease-out;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+form {
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flex-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 50px;
+  justify-content: center;
+}
+
+p {
+  margin-left: 15px;
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  background-color: #7fd8eb;
+  color: #444444;
+  outline: 0;
+  border-radius: 8px;
+  border: 0;
+
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #829ede;
+  color: #fff;
+}
+
+button:active {
+  background-color: #987feb;
+}
